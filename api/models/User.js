@@ -32,10 +32,6 @@ module.exports = {
             type: 'string',
             defaultsTo: ''
         },
-        cameras: {
-            collection: 'camera',
-            via: 'owner'
-        },
 
         toJSON: function () {
             var obj = this.toObject();
