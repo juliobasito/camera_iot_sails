@@ -6,30 +6,50 @@
  */
 
 module.exports = {
+    schema: true,
 
-  shema : true, /* Remove if mongoBD is used */
-  attributes: {
-    username: {},
-    password: {},
-    email: {},
-    firstName: {},
-    lastName: {},
+    attributes: {
+        username: {
+            type: 'string',
+            required: true,
+            unique: true,
+            alphanumericdashed: true
+        },
+        email: {
+            type: 'email',
+            required: true,
+            unique: true,
+        },
+        password: {
+            type: 'string',
+            required: true,
+        },
+        firstName: {
+            type: 'string',
+            defaultsTo: ''
+        },
+        lastName: {
+            type: 'string',
+            defaultsTo: ''
+        },
 
-  toJson: function (){
-    var obj = this.toObject();
-    delete obj.password;
-    return obj;
+
+        toJSON: function () {
+            var obj = this.toObject();
+            delete obj.password;
+            delete obj.createdAt;
+            delete obj.updatedAt;
+            /*  delete obj.id;*/
+            return obj;
+        }
+    },
+    beforeCreate: function (values, next) {
+        SecurityService.hashPassword(values);
+        next();
+    },
+    beforeUpdate: function (values, next) {
+        SecurityService.hashPassword(values);
+        next();
     }
-  },
-  /*Value current object*/
 
-  beforeUpdate: function (value, next){
-    /*todo hash password if necessary*/
-    return next();
-  },
-  beforeCreate: function (value, next){
-    /*todo hash password*/
-    SecurityService.hashPassword(value);
-    return next();
-  }
 };
