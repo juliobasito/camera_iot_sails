@@ -16,10 +16,10 @@ module.exports = {
       return jwt.sign({
         user : user.toJSON()
       },
-      sail.config.jwtSettings.secret,
+      sails.config.jwtSettings.secret,
       {
         algorithm: sails.config.jwtSettings.algo,
-        expiresInMinutes: sails.config.jwtSettings.expires
+        expiresIn: sails.config.jwtSettings.expires
       }
     )
   }
