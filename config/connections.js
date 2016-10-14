@@ -78,7 +78,7 @@ module.exports.connections = {
     adapter: 'sails-postgresql',
     host: 'localhost',
     user: 'role_iot', // optional
-    password: 'teamiot', // optional
+    password: 'team_iot', // optional
     database: 'camera_iot' //optional
   }
 
