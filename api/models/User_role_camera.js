@@ -8,17 +8,14 @@
 module.exports = {
 
   attributes: {
-    user_id: {
-      type:'integer',
-      required: true
-    },
-    camera_id: {
-      type:'integer',
-      required: true
-    },
     role_id: {
-      type:'integer',
-      required: true
+      type:'integer'
+    },
+    users: {
+      model: 'user'
+    },
+    cameras: {
+      model: 'camera'
     }
   }
 };

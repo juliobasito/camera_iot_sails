@@ -32,6 +32,10 @@ module.exports = {
             type: 'string',
             defaultsTo: ''
         },
+        user_role_camera: {
+            collection: 'user_role_camera',
+            via: 'users'
+        },
 
         toJSON: function () {
             var obj = this.toObject();
