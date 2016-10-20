@@ -10,5 +10,17 @@ module.exports = {
 		return res.ok ({
 				user: req.user
 		})
-	}
+	},
+
+	getCamera: function (req, res) {
+			User.find({id: req.user.id})
+				.populate('user_role_camera')
+				.exec(function(err, users) {
+					if(err){
+					}
+
+					return res.ok ({users: users})
+				}
+			);
+		}
 };

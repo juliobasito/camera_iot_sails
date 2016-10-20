@@ -8,10 +8,26 @@
 module.exports = {
 
   attributes: {
-    identifier: {
-      type: 'text',
+    nom: {
+      type: 'string',
       unique: true,
       required: true
+    },
+    url: {
+      type: 'string'
+    },
+    etat: {
+      type: 'boolean',
+      default: true
+    },
+    uuid: {
+      type: 'string',
+      unique: true,
+      default: "francois emile"
+    },
+    user_role_camera: {
+      collection: 'user_role_camera',
+      via: 'cameras'
     },
 
   }
