@@ -10,8 +10,6 @@ module.exports = {
   attributes: {
     nom: {
       type: 'string',
-      unique: true,
-      required: true
     },
     url: {
       type: 'string'
