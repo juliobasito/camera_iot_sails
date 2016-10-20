@@ -9,7 +9,7 @@ module.exports = {
 
   attributes: {
     identifier: {
-      type: 'integer',
+      type: 'text',
       unique: true,
       required: true
     },
