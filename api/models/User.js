@@ -32,9 +32,9 @@ module.exports = {
             type: 'string',
             defaultsTo: ''
         },
-        user_role_camera: {
-            collection: 'user_role_camera',
-            via: 'users'
+        userrolecamera: {
+            collection: 'userrolecamera',
+            via: 'owner'
         },
 
         toJSON: function () {

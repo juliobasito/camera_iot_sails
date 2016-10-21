@@ -40,13 +40,13 @@ module.exports.connections = {
   * Run: npm install sails-mysql                                             *
   *                                                                          *
   ***************************************************************************/
-  someMysqlServer: {
-    adapter: 'sails-mysql',
-    host: 'localhost',
-    user: 'root', //optional
-    password: 'tharsan753', //optional
-    database: 'database_sails' //optional
-  },
+  // someMysqlServer: {
+  //   adapter: 'sails-mysql',
+  //   host: 'YOUR_MYSQL_SERVER_HOSTNAME_OR_IP_ADDRESS',
+  //   user: 'YOUR_MYSQL_USER', //optional
+  //   password: 'YOUR_MYSQL_PASSWORD', //optional
+  //   database: 'YOUR_MYSQL_DB' //optional
+  // },
 
   /***************************************************************************
   *                                                                          *
@@ -74,13 +74,13 @@ module.exports.connections = {
   *                                                                          *
   *                                                                          *
   ***************************************************************************/
-  /*somePostgresqlServer: {
+  somePostgresqlServer: {
     adapter: 'sails-postgresql',
     host: 'localhost',
     user: 'role_iot', // optional
-    password: 'team_iot', // optional
+    password: 'root', // optional
     database: 'camera_iot' //optional
-  }*/
+  }
 
 
   /***************************************************************************

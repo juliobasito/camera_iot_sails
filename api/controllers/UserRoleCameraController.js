@@ -1,10 +1,11 @@
 /**
- * User_role_cameraController
+ * UserRoleCameraController
  *
- * @description :: Server-side logic for managing user_role_cameras
+ * @description :: Server-side logic for managing Userrolecameras
  * @help        :: See http://sailsjs.org/#!/documentation/concepts/Controllers
  */
 
 module.exports = {
-	
+
 };
+
