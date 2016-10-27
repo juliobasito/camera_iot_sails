@@ -8,10 +8,8 @@
 module.exports = {
 
   attributes: {
-      identifier: {
-          type: 'string',
           nom: {
-              type: 'string',
+              type: 'string'
           },
           url: {
               type: 'string'
@@ -30,5 +28,4 @@ module.exports = {
               via: 'cameras'
           }
       }
-  }
 };
