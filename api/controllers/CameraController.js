@@ -6,17 +6,6 @@
  */
 
 module.exports = {
-    add : function (req,res) {
-        Camera
-            .create(_.omit(req.allParams(),'id'))
-            .then(function(camera){
-                return {
-                    camera: camera
-                }
-
-            })
-            .then(res.created)
-            .catch(res.serverError)
-    }
+	
 };
 
