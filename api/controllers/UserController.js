@@ -29,5 +29,17 @@ module.exports = {
                 })
             }
         );
+    },
+
+    searchUsers: function (req, res) {
+        User.find({username: {contains: req.param('usern')}})
+            .exec(function (err, users) {
+                if (err) {
+                    return res.serverError(err);
+                }
+                return res.ok({
+                    pseudoUsers: users
+                })
+            })
     }
-}
+};

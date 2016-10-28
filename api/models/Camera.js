@@ -17,7 +17,7 @@ module.exports = {
       },
       state: {
         type: 'boolean',
-        default: true
+        default: false
       },
       uuid: {
         type: 'string',
